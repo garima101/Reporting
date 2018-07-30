@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <listeners>
+    <listener class-name="com.experitest.auto.Listener"/>
+    <listener class-name="com.experitest.auto.TestNGCustomReportListener"/>
+  </listeners>
+  <test name="Test(failed)" parallel="tests">
+    <classes>
+      <class name="com.experitest.auto.test">
+        <methods>
+          <include name="teardown"/>
+          <include name="test3"/>
+        </methods>
+      </class> <!-- com.experitest.auto.test -->
+    </classes>
+  </test> <!-- Test(failed) -->
+  <test name="b(failed)" parallel="tests">
+    <classes>
+      <class name="com.experitest.auto.Garima">
+        <methods>
+          <include name="garima3"/>
+        </methods>
+      </class> <!-- com.experitest.auto.Garima -->
+      <class name="com.experitest.auto.test">
+        <methods>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.experitest.auto.test -->
+    </classes>
+  </test> <!-- b(failed) -->
+</suite> <!-- Failed suite [Suite] -->
